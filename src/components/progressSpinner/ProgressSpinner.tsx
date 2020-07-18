@@ -39,13 +39,14 @@ type Props = {
 }
 
 /**
- * Component used to show the progress of a task. Given a 'progress' progress count
+ * Component used to show the progress of a task. Given a 'progress' count
  * and a 'total' count, it will calculate the progress as a percentage and show a spinner
  * made up of 2 segments:
- *  1. A segment to showing current progress, shown in a color defined by the color prop.
- *  2. A placeholder segment showing the remaining progress. The current progress overlaps this segment which remain
+ *  1. A segment showing current progress, shown in a color defined by the color prop.
+ *  2. A placeholder segment showing the remaining progress. The current progress overlaps this segment which remains
  * on the background.
- * The current progress segment rotates clockwise until the task completes, if the spin prop is true.
+ *
+ * The current progress segment rotates clockwise when the spin prop is true, until the task completes,
  * After that a task completed state is shown with a video.
  */
 const ProgressSpinner = ({ progress, total, progressColor, remainingColor, backgroundColor, strokeWidth, fontSizePx, spin }: Props) => {
