@@ -1,0 +1,48 @@
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinnerWrapper {
+  position: relative;
+}
+
+.spinning path:nth-child(2) {
+  animation: rotating 2s linear infinite;
+  will-change: transform;
+}
+
+.textWrapper {
+  position: absolute;
+  display: grid;
+  font-weight: 600;
+  grid-template-areas: 'number percentage' 'number .';
+  grid-template-columns: auto auto;
+  grid-column-gap: 4px;
+  grid-template-rows: 50% 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.progressValue {
+  grid-area: number;
+}
+
+.percentage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: percentage;
+}
+
+.videoWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demoWrapper {
+  display: grid;
+  grid-template-rows: 200px auto;
+  grid-row-gap: 32px;
+}
+
+.controls {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 16px;
+}
+
+.controls button {
+  width: 150px
+}

@@ -10,3 +10,21 @@ body,
   padding: 0;
   color: '#a'
 }
+
+button {
+  border-radius: 30px;
+  background-color: #409fff;
+  border: 1px solid #409fff;
+  color: white;
+  padding: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:focus {
+  outline: none;
+}

@@ -7,5 +7,5 @@
   "trailingComma": "none",
   "jsxBracketSameLine": false,
   "bracketSpacing": true,
-  "parser": "babel"
+  "parser": "typescript"
 }
