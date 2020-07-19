@@ -67,3 +67,5 @@ A demo app has been built as part of the project to simulate an actual file uplo
 
 1. A button to start and reset an upload simulation. When we press this button and start a simulation the app starts injecting properties into the spinner component to simulate a file upload progress.
 2. A button to enable/disable the spinning feature on the component. When spinning is disabled the progress segment will continue to gro during an upload simulation, but not spin around while it does so.
+
+Access the Demo [here](https://vigilant-neumann-e4fa57.netlify.app)
