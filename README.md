@@ -27,6 +27,12 @@ To run the tests
   yarn test
 ```
 
+To build the app for production
+
+```
+  yarn build
+```
+
 
 
 ## The ProgressSpinner Component
