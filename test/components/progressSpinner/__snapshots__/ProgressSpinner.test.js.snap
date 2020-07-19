@@ -48,19 +48,9 @@ exports[`ProgressSpinner with some progress without having completed  should not
     </svg>
     <div
       class="textWrapper"
-      style="font-size: 72px; line-height: 72px;"
+      style="font-size: 72px;"
     >
-      <div
-        class="progressValue"
-      >
-        20
-      </div>
-      <div
-        class="percentage"
-        style="font-size: 28.8px; color: rgb(225, 230, 233);"
-      >
-        %
-      </div>
+      20
     </div>
   </div>
 </div>
@@ -99,19 +89,9 @@ exports[`ProgressSpinner with some progress without having completed  should ren
     </svg>
     <div
       class="textWrapper"
-      style="font-size: 72px; line-height: 72px;"
+      style="font-size: 72px;"
     >
-      <div
-        class="progressValue"
-      >
-        20
-      </div>
-      <div
-        class="percentage"
-        style="font-size: 28.8px; color: rgb(225, 230, 233);"
-      >
-        %
-      </div>
+      20
     </div>
   </div>
 </div>
@@ -150,19 +130,9 @@ exports[`ProgressSpinner with zero progress. should render a progress spinner wi
     </svg>
     <div
       class="textWrapper"
-      style="font-size: 72px; line-height: 72px;"
+      style="font-size: 72px;"
     >
-      <div
-        class="progressValue"
-      >
-        0
-      </div>
-      <div
-        class="percentage"
-        style="font-size: 28.8px; color: rgb(225, 230, 233);"
-      >
-        %
-      </div>
+      0
     </div>
   </div>
 </div>

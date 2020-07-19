@@ -15,7 +15,7 @@ describe('ProgressSpinner', () => {
 
       expect(container).toMatchSnapshot()
       expect(container.querySelectorAll('path').length).toBe(2)
-      expect(container.querySelector('.progressValue').innerHTML).toBe('0')
+      expect(container.querySelector('.textWrapper').innerHTML).toBe('0')
     })
 
     it('should ignore the spin property and not make the spinner spin when the progress is zero.', () => {
@@ -31,7 +31,7 @@ describe('ProgressSpinner', () => {
 
       expect(container).toMatchSnapshot()
       expect(container.querySelectorAll('path').length).toBe(2)
-      expect(container.querySelector('.progressValue').innerHTML).toBe('20')
+      expect(container.querySelector('.textWrapper').innerHTML).toBe('20')
       expect(container.querySelectorAll('.spinning').length).toBe(1)
     })
 
@@ -63,7 +63,7 @@ describe('ProgressSpinner', () => {
         componentProps.backgroundColor
       )
       expect(container.querySelector('.textWrapper').getAttribute('style')).toEqual(
-        `font-size: ${componentProps.fontSizePx}px; line-height: ${componentProps.fontSizePx}px;`
+        `font-size: ${componentProps.fontSizePx}px;`
       )
     })
   })

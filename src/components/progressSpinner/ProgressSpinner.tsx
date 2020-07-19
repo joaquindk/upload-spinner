@@ -90,9 +90,8 @@ const ProgressSpinner = ({ progress, total, progressColor, remainingColor, backg
                 {renderArc({ endAngle: progressRad, color: progressColor, radius })}
               </Group>
             </svg>
-            <div className={styles.textWrapper} style={{ fontSize: `${fontSizePx}px`, lineHeight: `${fontSizePx}px` }}>
-              <div className={styles.progressValue}>{`${Math.floor(progressRatio * 100)}`}</div>
-              <div className={styles.percentage} style={{ fontSize: `${fontSizePx * 0.4}px`, color: remainingColor }}>%</div>
+            <div className={styles.textWrapper} style={{ fontSize: `${fontSizePx}px` }}>
+              {`${Math.floor(progressRatio * 100)}`}
             </div>
           </div>
         )
