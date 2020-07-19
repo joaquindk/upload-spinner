@@ -23,14 +23,14 @@ const Application = () => {
   return (
     <div className={styles.container}>
       <div className={styles.demoWrapper}>
-        <ProgressSpinner
-          progress={currentProgress}
-          total={MAX_PROGRESS}
-          spin={isSpinning}
-        />
+        <ProgressSpinner progress={currentProgress} total={MAX_PROGRESS} spin={isSpinning} />
         <div className={styles.controls}>
-          <button onClick={() => setIsSimulating(!isSimulating)}>{isSimulating ? 'Reset simulation' : 'Start simulation'}</button>
-          <button onClick={() => setIsSpinning(!isSpinning)}>{isSpinning ? 'Stop spinning' : 'Start spinning'}</button>
+          <button onClick={() => setIsSimulating(!isSimulating)}>
+            {isSimulating ? 'Reset simulation' : 'Start simulation'}
+          </button>
+          <button onClick={() => setIsSpinning(!isSpinning)}>
+            {isSpinning ? 'Stop spinning' : 'Start spinning'}
+          </button>
         </div>
       </div>
     </div>

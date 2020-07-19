@@ -11,25 +11,25 @@ const SegmentTypes = Object.freeze({
   REMAINING: 'REMAINING'
 })
 
-type SegmentKeys = keyof typeof SegmentTypes;
+type SegmentKeys = keyof typeof SegmentTypes
 type SegmentTypeValues = typeof SegmentTypes[SegmentKeys]
 
 type ProgressEntry = {
-  type: SegmentTypeValues,
+  type: SegmentTypeValues
   value: number
 }
 
 type Props = {
   /** Current progress. */
-  progress: number,
+  progress: number
   /** Total progress for which the task is considered completed. */
-  total: number,
+  total: number
   /** Color used for the segment showing the currently completed progress. */
-  progressColor: string,
+  progressColor: string
   /** Color used for the segment showing the ramaining progress. */
-  remainingColor: string,
+  remainingColor: string
   /** Color used for the background. */
-  backgroundColor: string,
+  backgroundColor: string
   /** Width of the circle stroke. */
   strokeWidth: number
   /** Font size for the progress text. */
@@ -49,17 +49,37 @@ type Props = {
  * The current progress segment rotates clockwise when the spin prop is true, until the task completes,
  * After that a task completed state is shown with a video.
  */
-const ProgressSpinner = ({ progress, total, progressColor, remainingColor, backgroundColor, strokeWidth, fontSizePx, spin }: Props) => {
+const ProgressSpinner = ({
+  progress,
+  total,
+  progressColor,
+  remainingColor,
+  backgroundColor,
+  strokeWidth,
+  fontSizePx,
+  spin
+}: Props) => {
   const progressRatio = progress / total
   const progressRad = progressRatio * 2 * Math.PI
 
-  const renderArc = ({ endAngle, color, radius }: {endAngle: number, color: string, radius: number}) => (
+  const renderArc = ({
+    endAngle,
+    color,
+    radius
+  }: {
+    endAngle: number
+    color: string
+    radius: number
+  }) => (
     <Arc
       data={{}}
       outerRadius={radius}
       innerRadius={radius - strokeWidth}
       cornerRadius={strokeWidth}
-      startAngle={0} endAngle={endAngle} fill={color}/>
+      startAngle={0}
+      endAngle={endAngle}
+      fill={color}
+    />
   )
 
   return (
@@ -76,7 +96,8 @@ const ProgressSpinner = ({ progress, total, progressColor, remainingColor, backg
                 src="https://prod-cdn.wetransfer.net/packs/media/transfer_window/transfer_completed-3-5dbf2f01.mp4"
                 autoPlay
                 loop
-                style={{ width: `${radius * 2}px` }}/>
+                style={{ width: `${radius * 2}px` }}
+              />
             </div>
           )
         }
@@ -96,7 +117,8 @@ const ProgressSpinner = ({ progress, total, progressColor, remainingColor, backg
           </div>
         )
       }}
-    </ParentSize>)
+    </ParentSize>
+  )
 }
 
 ProgressSpinner.defaultProps = {
