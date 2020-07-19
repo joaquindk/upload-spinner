@@ -20,3 +20,15 @@ To run the project on the browser simply
   cd upload-spinner
   yarn install && yarn start
 ```
+
+To run the tests
+
+```
+  yarn test
+```
+
+
+
+## The ProgressSpinner Component
+
+![Spinner demo](doc/spinner-demo.gif)
